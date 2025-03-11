@@ -45,7 +45,7 @@ DATA_STATE state, nxt_state;
 reg [LINE_SIZE-1:0][7:0] line_arr;
 SET_DATA set_arr;
 
-always_ff @(clk) begin
+always_ff @(posedge clk) begin
     if(!rst_n) begin
         state <= IDLE;
     end
